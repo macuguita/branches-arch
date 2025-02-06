@@ -110,27 +110,28 @@
 [Architectury Transformer DEBUG]  - /Users/raul/Documents/Github/branches-arch/.gradle/loom-cache/remapped_mods/net_fabricmc_yarn_1_20_1_1_20_1_build_1_v2_forge_1_20_1_47_3_12_forge/dev/architectury/architectury-forge/9.2.14/architectury-forge-9.2.14.jar
 [Architectury Transformer DEBUG]  - /Users/raul/Documents/Github/branches-arch/.gradle/loom-cache/remapped_mods/net_fabricmc_yarn_1_20_1_1_20_1_build_1_v2_forge_1_20_1_47_3_12_forge/maven/modrinth/moonlight/BPcfgWEU/moonlight-BPcfgWEU.jar
 [Architectury Transformer DEBUG]  - /Users/raul/Documents/Github/branches-arch/.gradle/loom-cache/remapped_mods/net_fabricmc_yarn_1_20_1_1_20_1_build_1_v2_forge_1_20_1_47_3_12_forge/maven/modrinth/every-compat/YaqFV329/every-compat-YaqFV329.jar
-[Architectury Transformer] Read classpath in 1.133 s
+[Architectury Transformer] Read classpath in 673.9 ms
 [Architectury Transformer DEBUG] Closed File Systems for /Users/raul/Documents/Github/branches-arch/common/build/devlibs/branches-common-1.0.0-dev.jar
-[Architectury Transformer DEBUG] Transforming 8 transformer(s) from /Users/raul/Documents/Github/branches-arch/common/build/devlibs/branches-common-1.0.0-dev.jar to /var/folders/jd/mjn83y2s5b57wbf_mwjbvy_h0000gn/T/6082255508540842115.jar: 
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RuntimeMixinRefmapDetector@701fc37a
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformExpectPlatform@4148db48
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RemapInjectables@282003e1
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformPlatformOnly@7fad8c79
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformForgeAnnotations@71a794e5
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformForgeEnvironment@76329302
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.GenerateFakeForgeMod@5e25a92e
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.FixForgeMixin@4df828d7
-[Architectury Transformer DEBUG] Transforming from /Users/raul/Documents/Github/branches-arch/common/build/devlibs/branches-common-1.0.0-dev.jar to /var/folders/jd/mjn83y2s5b57wbf_mwjbvy_h0000gn/T/6082255508540842115.jar with 8 transformer(s) on dev.architectury.transformer.handler.SimpleTransformerHandler
+[Architectury Transformer DEBUG] Transforming 8 transformer(s) from /Users/raul/Documents/Github/branches-arch/common/build/devlibs/branches-common-1.0.0-dev.jar to /var/folders/jd/mjn83y2s5b57wbf_mwjbvy_h0000gn/T/15379087281765016876.jar: 
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RuntimeMixinRefmapDetector@71a794e5
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformExpectPlatform@76329302
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RemapInjectables@5e25a92e
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformPlatformOnly@4df828d7
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformForgeAnnotations@b59d31
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformForgeEnvironment@62fdb4a6
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.GenerateFakeForgeMod@11e21d0e
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.FixForgeMixin@1dd02175
+[Architectury Transformer DEBUG] Transforming from /Users/raul/Documents/Github/branches-arch/common/build/devlibs/branches-common-1.0.0-dev.jar to /var/folders/jd/mjn83y2s5b57wbf_mwjbvy_h0000gn/T/15379087281765016876.jar with 8 transformer(s) on dev.architectury.transformer.handler.SimpleTransformerHandler
 [Architectury Transformer DEBUG] Remapping with 1 mapping provider(s):
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformForgeEnvironment$$Lambda/0x000000780108d950@691a7f8f
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformForgeEnvironment$$Lambda/0x000000700108d8c0@2d9d4f9d
 [Architectury Transformer DEBUG] Remapping Classes:
 [Architectury Transformer DEBUG] net/fabricmc/api/EnvType -> net/minecraftforge/api/distmarker/Dist
 [Architectury Transformer DEBUG] net/fabricmc/api/Environment -> net/minecraftforge/api/distmarker/OnlyIn
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing com/macuguita/branches/Branches with maxs=true frames=true
-[Architectury Transformer DEBUG] Writing com/macuguita/branches/utils/ModUtils with maxs=true frames=true
+[Architectury Transformer DEBUG] Writing com/macuguita/branches/utils/RegUtils with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/macuguita/branches/utils/ModTags$Blocks with maxs=true frames=true
+[Architectury Transformer DEBUG] Writing com/macuguita/branches/utils/ModUtils with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/macuguita/branches/utils/ModTags$Items with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/macuguita/branches/utils/ModTags with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/macuguita/branches/item/ModItemGroups with maxs=true frames=true
@@ -143,15 +144,15 @@
 [Architectury Transformer DEBUG] Found mixin config(s): branches.mixins.json
 [Architectury Transformer DEBUG] Appended Launch Argument: [--mixin.config, branches.mixins.json]
 [Architectury Transformer DEBUG] Remapping refmap from intermediary to srg: branches-forge-forge-refmap.json
-[Architectury Transformer DEBUG] Closed File Systems for /var/folders/jd/mjn83y2s5b57wbf_mwjbvy_h0000gn/T/6082255508540842115.jar
+[Architectury Transformer DEBUG] Closed File Systems for /var/folders/jd/mjn83y2s5b57wbf_mwjbvy_h0000gn/T/15379087281765016876.jar
 [Architectury Transformer] Listening at /Users/raul/Documents/Github/branches-arch/common/build/devlibs/branches-common-1.0.0-dev.jar
-[Architectury Transformer DEBUG] Temporary jar [/var/folders/jd/mjn83y2s5b57wbf_mwjbvy_h0000gn/T/6082255508540842115.jar] contains packages: com.macuguita.branches.item, com.macuguita.branches.utils, com.macuguita.branches, com.macuguita.branches.block.custom, com.macuguita.branches.block
+[Architectury Transformer DEBUG] Temporary jar [/var/folders/jd/mjn83y2s5b57wbf_mwjbvy_h0000gn/T/15379087281765016876.jar] contains packages: com.macuguita.branches.item, com.macuguita.branches.utils, com.macuguita.branches, com.macuguita.branches.block.custom, com.macuguita.branches.block
 [Architectury Transformer DEBUG] Closed File Systems for /Users/raul/Documents/Github/branches-arch/common/build/devlibs/branches-common-1.0.0-dev.jar
 [Architectury Transformer DEBUG] Classpath entry [/Users/raul/Documents/Github/branches-arch/forge/build/classes/java/main] contains packages: com.macuguita.branches.forge.compat, com.macuguita.branches.forge
 [Architectury Transformer DEBUG] Classpath entry [/Users/raul/Documents/Github/branches-arch/forge/build/resources/main] contains packages: 
 [Architectury Transformer DEBUG] Transforming from com/macuguita/branches/Branches.class to com/macuguita/branches/Branches.class with 8 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
 [Architectury Transformer DEBUG] Remapping with 1 mapping provider(s):
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformForgeEnvironment$$Lambda/0x000000780108d950@691a7f8f
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformForgeEnvironment$$Lambda/0x000000700108d8c0@2d9d4f9d
 [Architectury Transformer DEBUG] Remapping with Dirty Mappings...
 [Architectury Transformer DEBUG] Remapping Classes:
 [Architectury Transformer DEBUG] net/fabricmc/api/EnvType -> net/minecraftforge/api/distmarker/Dist
@@ -159,24 +160,64 @@
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing com/macuguita/branches/Branches with maxs=true frames=true
 [Architectury Transformer DEBUG] Remapping refmap from intermediary to srg: branches-forge-forge-refmap.json
-[Architectury Transformer DEBUG] Transformed com/macuguita/branches/Branches in 94.68 ms
+[Architectury Transformer DEBUG] Transformed com/macuguita/branches/Branches in 74.06 ms
 [Architectury Transformer DEBUG] Transforming from com/macuguita/branches/block/ModBlocks.class to com/macuguita/branches/block/ModBlocks.class with 8 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
 [Architectury Transformer DEBUG] Remapping with 1 mapping provider(s):
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformForgeEnvironment$$Lambda/0x000000780108d950@691a7f8f
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformForgeEnvironment$$Lambda/0x000000700108d8c0@2d9d4f9d
 [Architectury Transformer DEBUG] Remapping Classes:
 [Architectury Transformer DEBUG] net/fabricmc/api/EnvType -> net/minecraftforge/api/distmarker/Dist
 [Architectury Transformer DEBUG] net/fabricmc/api/Environment -> net/minecraftforge/api/distmarker/OnlyIn
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing com/macuguita/branches/block/ModBlocks with maxs=true frames=true
 [Architectury Transformer DEBUG] Remapping refmap from intermediary to srg: branches-forge-forge-refmap.json
-[Architectury Transformer DEBUG] Transformed com/macuguita/branches/block/ModBlocks in 48.22 ms
+[Architectury Transformer DEBUG] Transformed com/macuguita/branches/block/ModBlocks in 17.71 ms
 [Architectury Transformer DEBUG] Transforming from com/macuguita/branches/block/custom/BranchBlock.class to com/macuguita/branches/block/custom/BranchBlock.class with 8 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
 [Architectury Transformer DEBUG] Remapping with 1 mapping provider(s):
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformForgeEnvironment$$Lambda/0x000000780108d950@691a7f8f
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformForgeEnvironment$$Lambda/0x000000700108d8c0@2d9d4f9d
 [Architectury Transformer DEBUG] Remapping Classes:
 [Architectury Transformer DEBUG] net/fabricmc/api/EnvType -> net/minecraftforge/api/distmarker/Dist
 [Architectury Transformer DEBUG] net/fabricmc/api/Environment -> net/minecraftforge/api/distmarker/OnlyIn
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing com/macuguita/branches/block/custom/BranchBlock with maxs=true frames=true
 [Architectury Transformer DEBUG] Remapping refmap from intermediary to srg: branches-forge-forge-refmap.json
-[Architectury Transformer DEBUG] Transformed com/macuguita/branches/block/custom/BranchBlock in 27.42 ms
+[Architectury Transformer DEBUG] Transformed com/macuguita/branches/block/custom/BranchBlock in 11.73 ms
+[Architectury Transformer DEBUG] Transforming from com/macuguita/branches/utils/RegUtils.class to com/macuguita/branches/utils/RegUtils.class with 8 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
+[Architectury Transformer DEBUG] Remapping with 1 mapping provider(s):
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformForgeEnvironment$$Lambda/0x000000700108d8c0@2d9d4f9d
+[Architectury Transformer DEBUG] Remapping Classes:
+[Architectury Transformer DEBUG] net/fabricmc/api/EnvType -> net/minecraftforge/api/distmarker/Dist
+[Architectury Transformer DEBUG] net/fabricmc/api/Environment -> net/minecraftforge/api/distmarker/OnlyIn
+[Architectury Transformer DEBUG] Found class transformer
+[Architectury Transformer DEBUG] Writing com/macuguita/branches/utils/RegUtils with maxs=true frames=true
+[Architectury Transformer DEBUG] Remapping refmap from intermediary to srg: branches-forge-forge-refmap.json
+[Architectury Transformer DEBUG] Transformed com/macuguita/branches/utils/RegUtils in 13.96 ms
+[Architectury Transformer DEBUG] Transforming from com/macuguita/branches/item/ModItemGroups.class to com/macuguita/branches/item/ModItemGroups.class with 8 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
+[Architectury Transformer DEBUG] Remapping with 1 mapping provider(s):
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformForgeEnvironment$$Lambda/0x000000700108d8c0@2d9d4f9d
+[Architectury Transformer DEBUG] Remapping Classes:
+[Architectury Transformer DEBUG] net/fabricmc/api/EnvType -> net/minecraftforge/api/distmarker/Dist
+[Architectury Transformer DEBUG] net/fabricmc/api/Environment -> net/minecraftforge/api/distmarker/OnlyIn
+[Architectury Transformer DEBUG] Found class transformer
+[Architectury Transformer DEBUG] Writing com/macuguita/branches/item/ModItemGroups with maxs=true frames=true
+[Architectury Transformer DEBUG] Remapping refmap from intermediary to srg: branches-forge-forge-refmap.json
+[Architectury Transformer DEBUG] Transformed com/macuguita/branches/item/ModItemGroups in 10.36 ms
+[Architectury Transformer DEBUG] Transforming from com/macuguita/branches/utils/ModTags$Blocks.class to com/macuguita/branches/utils/ModTags$Blocks.class with 8 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
+[Architectury Transformer DEBUG] Remapping with 1 mapping provider(s):
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformForgeEnvironment$$Lambda/0x000000700108d8c0@2d9d4f9d
+[Architectury Transformer DEBUG] Remapping Classes:
+[Architectury Transformer DEBUG] net/fabricmc/api/EnvType -> net/minecraftforge/api/distmarker/Dist
+[Architectury Transformer DEBUG] net/fabricmc/api/Environment -> net/minecraftforge/api/distmarker/OnlyIn
+[Architectury Transformer DEBUG] Found class transformer
+[Architectury Transformer DEBUG] Writing com/macuguita/branches/utils/ModTags$Blocks with maxs=true frames=true
+[Architectury Transformer DEBUG] Remapping refmap from intermediary to srg: branches-forge-forge-refmap.json
+[Architectury Transformer DEBUG] Transformed com/macuguita/branches/utils/ModTags$Blocks in 12.02 ms
+[Architectury Transformer DEBUG] Transforming from com/macuguita/branches/utils/ModTags$Items.class to com/macuguita/branches/utils/ModTags$Items.class with 8 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
+[Architectury Transformer DEBUG] Remapping with 1 mapping provider(s):
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformForgeEnvironment$$Lambda/0x000000700108d8c0@2d9d4f9d
+[Architectury Transformer DEBUG] Remapping Classes:
+[Architectury Transformer DEBUG] net/fabricmc/api/EnvType -> net/minecraftforge/api/distmarker/Dist
+[Architectury Transformer DEBUG] net/fabricmc/api/Environment -> net/minecraftforge/api/distmarker/OnlyIn
+[Architectury Transformer DEBUG] Found class transformer
+[Architectury Transformer DEBUG] Writing com/macuguita/branches/utils/ModTags$Items with maxs=true frames=true
+[Architectury Transformer DEBUG] Remapping refmap from intermediary to srg: branches-forge-forge-refmap.json
+[Architectury Transformer DEBUG] Transformed com/macuguita/branches/utils/ModTags$Items in 10.07 ms

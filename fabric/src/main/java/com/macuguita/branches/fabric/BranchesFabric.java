@@ -26,5 +26,6 @@ public final class BranchesFabric implements ModInitializer {
         } else {
             Branches.LOGGER.warn("Every Compat is not loaded. Skipping compatibility module.");
         }
+        Branches.commonSetup();
     }
 }

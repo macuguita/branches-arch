@@ -1,11 +1,13 @@
 package com.macuguita.branches.forge;
 
+import com.macuguita.branches.block.ModBlocks;
 import com.macuguita.branches.forge.compat.WoodGood;
 import dev.architectury.platform.forge.EventBuses;
 import net.mehvahdjukaar.every_compat.api.EveryCompatAPI;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import com.macuguita.branches.Branches;
@@ -14,8 +16,8 @@ import com.macuguita.branches.Branches;
 public final class BranchesForge {
     public BranchesForge() {
         // Submit our event bus to let Architectury API register our content on the right time.
-        EventBuses.registerModEventBus(Branches.MOD_ID, FMLJavaModLoadingContext.get().getModEventBus());
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        EventBuses.registerModEventBus(Branches.MOD_ID, modEventBus);
 
         // Run our common setup.
         Branches.init();
@@ -29,5 +31,9 @@ public final class BranchesForge {
         } else {
             Branches.LOGGER.warn("Every Compat is not loaded. Skipping compatibility module.");
         }
+        modEventBus.addListener(this::commonSetup);
+    }
+    private void commonSetup(final FMLCommonSetupEvent event) {
+        Branches.commonSetup();
     }
 }

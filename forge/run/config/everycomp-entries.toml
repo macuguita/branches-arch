@@ -1,0 +1,10 @@
+
+#Disables specific entries
+[entries]
+
+	[entries.wood_type]
+
+		[entries.wood_type.branches]
+			stripped_branch = true
+			branch = true
+

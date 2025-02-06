@@ -117,17 +117,18 @@
 [Architectury Transformer DEBUG]  - /Users/raul/Documents/Github/branches-arch/.gradle/loom-cache/remapped_mods/net_fabricmc_yarn_1_20_1_1_20_1_build_1_v2/net/fabricmc/fabric-api/fabric-resource-loader-v0/0.11.11+fb82e9d777/fabric-resource-loader-v0-0.11.11+fb82e9d777.jar
 [Architectury Transformer DEBUG]  - /Users/raul/Documents/Github/branches-arch/.gradle/loom-cache/remapped_mods/net_fabricmc_yarn_1_20_1_1_20_1_build_1_v2/net/fabricmc/fabric-api/fabric-sound-api-v1/1.0.13+1802ada577/fabric-sound-api-v1-1.0.13+1802ada577.jar
 [Architectury Transformer DEBUG]  - /Users/raul/Documents/Github/branches-arch/.gradle/loom-cache/remapped_mods/net_fabricmc_yarn_1_20_1_1_20_1_build_1_v2/net/fabricmc/fabric-api/fabric-transitive-access-wideners-v1/4.3.1+1802ada577/fabric-transitive-access-wideners-v1-4.3.1+1802ada577.jar
-[Architectury Transformer] Read classpath in 1.075 s
+[Architectury Transformer] Read classpath in 628.5 ms
 [Architectury Transformer DEBUG] Closed File Systems for /Users/raul/Documents/Github/branches-arch/common/build/devlibs/branches-common-1.0.0-dev.jar
-[Architectury Transformer DEBUG] Transforming 5 transformer(s) from /Users/raul/Documents/Github/branches-arch/common/build/devlibs/branches-common-1.0.0-dev.jar to /var/folders/jd/mjn83y2s5b57wbf_mwjbvy_h0000gn/T/10425411583652765341.jar: 
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RuntimeMixinRefmapDetector@4524411f
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.GenerateFakeFabricMod@401e7803
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformExpectPlatform@10dba097
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RemapInjectables@1786f9d5
-[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformPlatformOnly@704d6e83
-[Architectury Transformer DEBUG] Transforming from /Users/raul/Documents/Github/branches-arch/common/build/devlibs/branches-common-1.0.0-dev.jar to /var/folders/jd/mjn83y2s5b57wbf_mwjbvy_h0000gn/T/10425411583652765341.jar with 5 transformer(s) on dev.architectury.transformer.handler.SimpleTransformerHandler
+[Architectury Transformer DEBUG] Transforming 5 transformer(s) from /Users/raul/Documents/Github/branches-arch/common/build/devlibs/branches-common-1.0.0-dev.jar to /var/folders/jd/mjn83y2s5b57wbf_mwjbvy_h0000gn/T/1667923838634876277.jar: 
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RuntimeMixinRefmapDetector@704d6e83
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.GenerateFakeFabricMod@43a0cee9
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformExpectPlatform@eb21112
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RemapInjectables@2eda0940
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformPlatformOnly@3578436e
+[Architectury Transformer DEBUG] Transforming from /Users/raul/Documents/Github/branches-arch/common/build/devlibs/branches-common-1.0.0-dev.jar to /var/folders/jd/mjn83y2s5b57wbf_mwjbvy_h0000gn/T/1667923838634876277.jar with 5 transformer(s) on dev.architectury.transformer.handler.SimpleTransformerHandler
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing com/macuguita/branches/Branches with maxs=true frames=true
+[Architectury Transformer DEBUG] Writing com/macuguita/branches/utils/RegUtils with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/macuguita/branches/utils/ModTags with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/macuguita/branches/utils/ModUtils with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing com/macuguita/branches/utils/ModTags$Blocks with maxs=true frames=true
@@ -137,25 +138,33 @@
 [Architectury Transformer DEBUG] Writing com/macuguita/branches/block/custom/BranchBlock with maxs=true frames=true
 [Architectury Transformer DEBUG] Checking whether /fabric.mod.json is a mixin config.
 [Architectury Transformer DEBUG] Checking whether /branches.mixins.json is a mixin config.
-[Architectury Transformer DEBUG] Closed File Systems for /var/folders/jd/mjn83y2s5b57wbf_mwjbvy_h0000gn/T/10425411583652765341.jar
+[Architectury Transformer DEBUG] Closed File Systems for /var/folders/jd/mjn83y2s5b57wbf_mwjbvy_h0000gn/T/1667923838634876277.jar
 [Architectury Transformer] Listening at /Users/raul/Documents/Github/branches-arch/common/build/devlibs/branches-common-1.0.0-dev.jar
-[Architectury Transformer DEBUG] Temporary jar [/var/folders/jd/mjn83y2s5b57wbf_mwjbvy_h0000gn/T/10425411583652765341.jar] contains packages: com.macuguita.branches.item, com.macuguita.branches.utils, com.macuguita.branches, com.macuguita.branches.block.custom, com.macuguita.branches.block
+[Architectury Transformer DEBUG] Temporary jar [/var/folders/jd/mjn83y2s5b57wbf_mwjbvy_h0000gn/T/1667923838634876277.jar] contains packages: com.macuguita.branches.item, com.macuguita.branches.utils, com.macuguita.branches, com.macuguita.branches.block.custom, com.macuguita.branches.block
 [Architectury Transformer DEBUG] Closed File Systems for /Users/raul/Documents/Github/branches-arch/common/build/devlibs/branches-common-1.0.0-dev.jar
 [Architectury Transformer DEBUG] Classpath entry [/Users/raul/Documents/Github/branches-arch/fabric/build/classes/java/main] contains packages: com.macuguita.branches.fabric, com.macuguita.branches.fabric.compat, com.macuguita.branches.fabric.datagen, com.macuguita.branches.fabric.client
 [Architectury Transformer DEBUG] Classpath entry [/Users/raul/Documents/Github/branches-arch/fabric/build/resources/main] contains packages: 
 [Architectury Transformer DEBUG] Transforming from com/macuguita/branches/Branches.class to com/macuguita/branches/Branches.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing com/macuguita/branches/Branches with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed com/macuguita/branches/Branches in 1.451 ms
+[Architectury Transformer DEBUG] Transformed com/macuguita/branches/Branches in 932.5 μs
 [Architectury Transformer DEBUG] Transforming from com/macuguita/branches/block/ModBlocks.class to com/macuguita/branches/block/ModBlocks.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing com/macuguita/branches/block/ModBlocks with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed com/macuguita/branches/block/ModBlocks in 1.143 ms
+[Architectury Transformer DEBUG] Transformed com/macuguita/branches/block/ModBlocks in 645.5 μs
 [Architectury Transformer DEBUG] Transforming from com/macuguita/branches/block/custom/BranchBlock.class to com/macuguita/branches/block/custom/BranchBlock.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing com/macuguita/branches/block/custom/BranchBlock with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed com/macuguita/branches/block/custom/BranchBlock in 2.152 ms
+[Architectury Transformer DEBUG] Transformed com/macuguita/branches/block/custom/BranchBlock in 1.491 ms
+[Architectury Transformer DEBUG] Transforming from com/macuguita/branches/utils/RegUtils.class to com/macuguita/branches/utils/RegUtils.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
+[Architectury Transformer DEBUG] Found class transformer
+[Architectury Transformer DEBUG] Writing com/macuguita/branches/utils/RegUtils with maxs=true frames=true
+[Architectury Transformer DEBUG] Transformed com/macuguita/branches/utils/RegUtils in 400.8 μs
 [Architectury Transformer DEBUG] Transforming from com/macuguita/branches/item/ModItemGroups.class to com/macuguita/branches/item/ModItemGroups.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing com/macuguita/branches/item/ModItemGroups with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed com/macuguita/branches/item/ModItemGroups in 1.022 ms
+[Architectury Transformer DEBUG] Transformed com/macuguita/branches/item/ModItemGroups in 553.7 μs
+[Architectury Transformer DEBUG] Transforming from com/macuguita/branches/utils/ModTags$Blocks.class to com/macuguita/branches/utils/ModTags$Blocks.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
+[Architectury Transformer DEBUG] Found class transformer
+[Architectury Transformer DEBUG] Writing com/macuguita/branches/utils/ModTags$Blocks with maxs=true frames=true
+[Architectury Transformer DEBUG] Transformed com/macuguita/branches/utils/ModTags$Blocks in 574.5 μs

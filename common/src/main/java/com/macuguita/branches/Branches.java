@@ -15,8 +15,15 @@ public final class Branches {
     public static void init() {
         ModBlocks.registerModBlocks();
         ModItemGroups.registerModItemGroups();
-        mapVanillaBranches();
-        registerFuels();
+    }
+
+    public static void commonSetup() {
+        try {
+            mapVanillaBranches();
+            registerFuels();
+        } catch (Exception e) {
+            Branches.LOGGER.error("Failed to map branches and register them as fuels", e);
+        }
     }
 
     private static void mapVanillaBranches() {
@@ -31,6 +38,7 @@ public final class Branches {
         strippedMapper(ModBlocks.CRIMSON_STIPE.get(), ModBlocks.STRIPPED_CRIMSON_STIPE.get());
         strippedMapper(ModBlocks.WARPED_STIPE.get(), ModBlocks.STRIPPED_WARPED_STIPE.get());
     }
+
     private static void registerFuels() {
         FuelRegistry.register(37, ModBlocks.ACACIA_BRANCH.get());
         FuelRegistry.register(37, ModBlocks.STRIPPED_ACACIA_BRANCH.get());
@@ -52,7 +60,6 @@ public final class Branches {
         FuelRegistry.register(37, ModBlocks.STRIPPED_CRIMSON_STIPE.get());
         FuelRegistry.register(37, ModBlocks.WARPED_STIPE.get());
         FuelRegistry.register(37, ModBlocks.STRIPPED_WARPED_STIPE.get());
-
     }
 
     public static void strippedMapper(Block branch, Block strippedBranch) {

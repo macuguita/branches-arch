@@ -2,23 +2,27 @@ package com.macuguita.branches.block;
 
 import com.macuguita.branches.Branches;
 import com.macuguita.branches.block.custom.BranchBlock;
-import com.macuguita.branches.item.ModItemGroups;
+import com.macuguita.branches.utils.RegUtils;
 import dev.architectury.registry.registries.DeferredRegister;
+import dev.architectury.registry.registries.Registrar;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.util.Identifier;
+
+import java.util.function.Supplier;
 
 import static com.macuguita.branches.Branches.MOD_ID;
 
 public class ModBlocks {
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(MOD_ID, RegistryKeys.BLOCK);
+    public static final Registrar<Block> BLOCK_REGISTRAR = BLOCKS.getRegistrar();
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(MOD_ID, RegistryKeys.ITEM);
+    public static final Registrar<Item> ITEM_REGISTRAR = ITEMS.getRegistrar();
 
 
     public static final RegistrySupplier<Block> ACACIA_BRANCH = createBranch("acacia_branch", Blocks.ACACIA_LOG);
@@ -52,20 +56,24 @@ public class ModBlocks {
     public static final RegistrySupplier<Block> STRIPPED_WARPED_STIPE = createBranch("stripped_warped_stipe", Blocks.STRIPPED_WARPED_STEM);
 
     public static RegistrySupplier<Block> createBranch(String name, Block wood) {
-        return registerBlock(name, new BranchBlock(AbstractBlock.Settings.copy(wood).mapColor(wood.getDefaultMapColor())), ModItemGroups.BRANCHES_TAB);
-    }
-
-    public static RegistrySupplier<Block> registerBlock(String name, Block block, RegistrySupplier<ItemGroup> tab) {
-        registerBlockItem(name, block, tab);
-        return BLOCKS.register(name, () -> block);
-    }
-
-    public static RegistrySupplier<Item> registerBlockItem(String name, Block block, RegistrySupplier<ItemGroup> tab) {
-        return ITEMS.register(name, () -> new BlockItem(block, new Item.Settings().arch$tab(tab)));
+        return registerWithItem(name, () -> new BranchBlock(AbstractBlock.Settings.copy(wood).mapColor(wood.getDefaultMapColor())));
     }
 
     public static void registerModBlocks() {
         Branches.LOGGER.info("Registering mod blocks for " + MOD_ID);
         ITEMS.register();
+        BLOCKS.register();
+    }
+
+    public static <T extends Block> RegistrySupplier<T> registerWithItem(String name, Supplier<T> block) {
+        return RegUtils.registerWithItem(BLOCKS, BLOCK_REGISTRAR, ITEMS, ITEM_REGISTRAR, new Identifier(MOD_ID, name), block);
+    }
+
+    public static <T extends Block> RegistrySupplier<T> registerWithoutItem(String path, Supplier<T> block) {
+        return RegUtils.registerWithoutItem(BLOCKS, BLOCK_REGISTRAR, new Identifier(MOD_ID, path), block);
+    }
+
+    public static <T extends Item> RegistrySupplier<T> registerItem(String path, Supplier<T> itemSupplier) {
+        return RegUtils.registerItem(ITEMS, ITEM_REGISTRAR, new Identifier(MOD_ID, path), itemSupplier);
     }
 }
