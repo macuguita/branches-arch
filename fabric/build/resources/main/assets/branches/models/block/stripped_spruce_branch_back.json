@@ -1,7 +1,0 @@
-{
-  "parent": "branches:block/template_branch_back",
-  "textures": {
-    "side": "minecraft:block/stripped_spruce_log",
-    "top": "branches:block/stripped_spruce_branch_top"
-  }
-}

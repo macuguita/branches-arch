@@ -1,7 +1,0 @@
-{
-  "parent": "branches:block/template_branch_inventory",
-  "textures": {
-    "side": "minecraft:block/crimson_stem",
-    "top": "branches:block/crimson_stipe_top"
-  }
-}

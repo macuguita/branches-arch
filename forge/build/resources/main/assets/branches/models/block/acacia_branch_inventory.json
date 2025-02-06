@@ -1,7 +1,0 @@
-{
-  "parent": "branches:block/template_branch_inventory",
-  "textures": {
-    "side": "minecraft:block/acacia_log",
-    "top": "branches:block/acacia_branch_top"
-  }
-}

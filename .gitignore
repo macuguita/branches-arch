@@ -1,23 +1,51 @@
-build/
-*.ipr
-fabric/run/
-forge/run/
-*.iws
-out/
-*.iml
-.gradle/
-output/
-bin/
-libs/
+# gradle
 
+common/.gradle/
+fabric/.gradle/
+forge/.gradle/
+neoforge/.gradle/
+.gradle/
+build/
+out/
+classes/
+
+# eclipse
+
+*.launch
+
+# idea
+
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# vscode
+
+.settings/
+.vscode/
+bin/
 .classpath
 .project
-.idea/
-classes/
-.metadata
-.cs_data
-.vscode
-.settings
-*.launch.DS_Store
-.DS_Store
-.architectury-transformer/
+
+# macos
+
+*.DS_Store
+
+# mod
+
+common/run/
+fabric/run/
+forge/run/
+neoforge/run/
+common/build/
+fabric/build/
+forge/build/
+neoforge/build/
+
+# java
+
+hs_err_*.log
+replay_*.log
+*.hprof
+*.jfr
