@@ -19,16 +19,16 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup registries) {
-        addBranchTag(ModBlocks.ACACIA_BRANCH);
-        addBranchTag(ModBlocks.BIRCH_BRANCH);
-        addBranchTag(ModBlocks.CHERRY_BRANCH);
-        addBranchTag(ModBlocks.DARK_OAK_BRANCH);
-        addBranchTag(ModBlocks.JUNGLE_BRANCH);
-        addBranchTag(ModBlocks.MANGROVE_BRANCH);
-        addBranchTag(ModBlocks.OAK_BRANCH);
-        addBranchTag(ModBlocks.SPRUCE_BRANCH);
-        addBranchTag(ModBlocks.CRIMSON_STIPE);
-        addBranchTag(ModBlocks.WARPED_STIPE);
+        addBranchTag(ModBlocks.ACACIA_BRANCH.get());
+        addBranchTag(ModBlocks.BIRCH_BRANCH.get());
+        addBranchTag(ModBlocks.CHERRY_BRANCH.get());
+        addBranchTag(ModBlocks.DARK_OAK_BRANCH.get());
+        addBranchTag(ModBlocks.JUNGLE_BRANCH.get());
+        addBranchTag(ModBlocks.MANGROVE_BRANCH.get());
+        addBranchTag(ModBlocks.OAK_BRANCH.get());
+        addBranchTag(ModBlocks.SPRUCE_BRANCH.get());
+        addBranchTag(ModBlocks.CRIMSON_STIPE.get());
+        addBranchTag(ModBlocks.WARPED_STIPE.get());
     }
 
     private void addBranchTag(Block branch) {

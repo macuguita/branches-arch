@@ -20,16 +20,16 @@ public class ModLangProvider extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(TranslationBuilder translationBuilder) {
-        generateBranchTranslations(ModBlocks.ACACIA_BRANCH, translationBuilder);
-        generateBranchTranslations(ModBlocks.BIRCH_BRANCH, translationBuilder);
-        generateBranchTranslations(ModBlocks.CHERRY_BRANCH, translationBuilder);
-        generateBranchTranslations(ModBlocks.DARK_OAK_BRANCH, translationBuilder);
-        generateBranchTranslations(ModBlocks.JUNGLE_BRANCH, translationBuilder);
-        generateBranchTranslations(ModBlocks.MANGROVE_BRANCH, translationBuilder);
-        generateBranchTranslations(ModBlocks.OAK_BRANCH, translationBuilder);
-        generateBranchTranslations(ModBlocks.SPRUCE_BRANCH, translationBuilder);
-        generateBranchTranslations(ModBlocks.CRIMSON_STIPE, translationBuilder);
-        generateBranchTranslations(ModBlocks.WARPED_STIPE, translationBuilder);
+        generateBranchTranslations(ModBlocks.ACACIA_BRANCH.get(), translationBuilder);
+        generateBranchTranslations(ModBlocks.BIRCH_BRANCH.get(), translationBuilder);
+        generateBranchTranslations(ModBlocks.CHERRY_BRANCH.get(), translationBuilder);
+        generateBranchTranslations(ModBlocks.DARK_OAK_BRANCH.get(), translationBuilder);
+        generateBranchTranslations(ModBlocks.JUNGLE_BRANCH.get(), translationBuilder);
+        generateBranchTranslations(ModBlocks.MANGROVE_BRANCH.get(), translationBuilder);
+        generateBranchTranslations(ModBlocks.OAK_BRANCH.get(), translationBuilder);
+        generateBranchTranslations(ModBlocks.SPRUCE_BRANCH.get(), translationBuilder);
+        generateBranchTranslations(ModBlocks.CRIMSON_STIPE.get(), translationBuilder);
+        generateBranchTranslations(ModBlocks.WARPED_STIPE.get(), translationBuilder);
 
         translationBuilder.add("block_type.branches.branch", "%s Branch");
         translationBuilder.add("block_type.branches.stripped_branch", "Stripped %s Branch");

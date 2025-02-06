@@ -7,26 +7,26 @@ import net.minecraft.block.Blocks;
 public class ModUtils {
 
     public static Block getStrippedBranchBlock(Block branch) {
-        if (branch.equals(ModBlocks.OAK_BRANCH)) {
-            return ModBlocks.STRIPPED_OAK_BRANCH;
-        } else if (branch.equals(ModBlocks.BIRCH_BRANCH)) {
-            return ModBlocks.STRIPPED_BIRCH_BRANCH;
-        } else if (branch.equals(ModBlocks.SPRUCE_BRANCH)) {
-            return ModBlocks.STRIPPED_SPRUCE_BRANCH;
-        } else if (branch.equals(ModBlocks.JUNGLE_BRANCH)) {
-            return ModBlocks.STRIPPED_JUNGLE_BRANCH;
-        } else if (branch.equals(ModBlocks.DARK_OAK_BRANCH)) {
-            return ModBlocks.STRIPPED_DARK_OAK_BRANCH;
-        } else if (branch.equals(ModBlocks.ACACIA_BRANCH)) {
-            return ModBlocks.STRIPPED_ACACIA_BRANCH;
-        } else if (branch.equals(ModBlocks.MANGROVE_BRANCH)) {
-            return ModBlocks.STRIPPED_MANGROVE_BRANCH;
-        } else if (branch.equals(ModBlocks.CHERRY_BRANCH)) {
-            return ModBlocks.STRIPPED_CHERRY_BRANCH;
-        } else if (branch.equals(ModBlocks.CRIMSON_STIPE)) {
-            return ModBlocks.STRIPPED_CRIMSON_STIPE;
-        } else if (branch.equals(ModBlocks.WARPED_STIPE)) {
-            return ModBlocks.STRIPPED_WARPED_STIPE;
+        if (branch.equals(ModBlocks.OAK_BRANCH.get())) {
+            return ModBlocks.STRIPPED_OAK_BRANCH.get();
+        } else if (branch.equals(ModBlocks.BIRCH_BRANCH.get())) {
+            return ModBlocks.STRIPPED_BIRCH_BRANCH.get();
+        } else if (branch.equals(ModBlocks.SPRUCE_BRANCH.get())) {
+            return ModBlocks.STRIPPED_SPRUCE_BRANCH.get();
+        } else if (branch.equals(ModBlocks.JUNGLE_BRANCH.get())) {
+            return ModBlocks.STRIPPED_JUNGLE_BRANCH.get();
+        } else if (branch.equals(ModBlocks.DARK_OAK_BRANCH.get())) {
+            return ModBlocks.STRIPPED_DARK_OAK_BRANCH.get();
+        } else if (branch.equals(ModBlocks.ACACIA_BRANCH.get())) {
+            return ModBlocks.STRIPPED_ACACIA_BRANCH.get();
+        } else if (branch.equals(ModBlocks.MANGROVE_BRANCH.get())) {
+            return ModBlocks.STRIPPED_MANGROVE_BRANCH.get();
+        } else if (branch.equals(ModBlocks.CHERRY_BRANCH.get())) {
+            return ModBlocks.STRIPPED_CHERRY_BRANCH.get();
+        } else if (branch.equals(ModBlocks.CRIMSON_STIPE.get())) {
+            return ModBlocks.STRIPPED_CRIMSON_STIPE.get();
+        } else if (branch.equals(ModBlocks.WARPED_STIPE.get())) {
+            return ModBlocks.STRIPPED_WARPED_STIPE.get();
         }
         return branch;
     }

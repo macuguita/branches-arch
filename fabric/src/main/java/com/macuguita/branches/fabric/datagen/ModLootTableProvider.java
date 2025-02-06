@@ -15,16 +15,16 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        addBranchDrop(ModBlocks.ACACIA_BRANCH);
-        addBranchDrop(ModBlocks.BIRCH_BRANCH);
-        addBranchDrop(ModBlocks.CHERRY_BRANCH);
-        addBranchDrop(ModBlocks.DARK_OAK_BRANCH);
-        addBranchDrop(ModBlocks.JUNGLE_BRANCH);
-        addBranchDrop(ModBlocks.MANGROVE_BRANCH);
-        addBranchDrop(ModBlocks.OAK_BRANCH);
-        addBranchDrop(ModBlocks.SPRUCE_BRANCH);
-        addBranchDrop(ModBlocks.CRIMSON_STIPE);
-        addBranchDrop(ModBlocks.WARPED_STIPE);
+        addBranchDrop(ModBlocks.ACACIA_BRANCH.get());
+        addBranchDrop(ModBlocks.BIRCH_BRANCH.get());
+        addBranchDrop(ModBlocks.CHERRY_BRANCH.get());
+        addBranchDrop(ModBlocks.DARK_OAK_BRANCH.get());
+        addBranchDrop(ModBlocks.JUNGLE_BRANCH.get());
+        addBranchDrop(ModBlocks.MANGROVE_BRANCH.get());
+        addBranchDrop(ModBlocks.OAK_BRANCH.get());
+        addBranchDrop(ModBlocks.SPRUCE_BRANCH.get());
+        addBranchDrop(ModBlocks.CRIMSON_STIPE.get());
+        addBranchDrop(ModBlocks.WARPED_STIPE.get());
     }
 
     private void addBranchDrop(Block branch) {

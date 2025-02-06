@@ -1,12 +1,9 @@
 package com.macuguita.branches.fabric;
 
-import com.macuguita.branches.block.ModBlocks;
 import com.macuguita.branches.fabric.compat.WoodGood;
-import com.macuguita.branches.fabric.item.ModItemGroups;
 import net.fabricmc.api.ModInitializer;
 
 import com.macuguita.branches.Branches;
-import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.loader.api.FabricLoader;
 import net.mehvahdjukaar.every_compat.api.EveryCompatAPI;
 
@@ -19,7 +16,6 @@ public final class BranchesFabric implements ModInitializer {
 
         // Run our common setup.
         Branches.init();
-        ModItemGroups.registerItemGroups();
         if (FabricLoader.getInstance().isModLoaded("everycomp")) {
             try {
                 EveryCompatAPI.registerModule(new WoodGood(Branches.MOD_ID, "br"));

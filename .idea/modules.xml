@@ -9,6 +9,12 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/branches.fabric.test.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/branches.fabric.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/forge/branches.forge.main.iml" filepath="$PROJECT_DIR$/.idea/modules/forge/branches.forge.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/forge/branches.forge.test.iml" filepath="$PROJECT_DIR$/.idea/modules/forge/branches.forge.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/com.macuguita.branches.branches.common.iml" filepath="$PROJECT_DIR$/.idea/modules/common/com.macuguita.branches.branches.common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/com.macuguita.branches.branches.common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/common/com.macuguita.branches.branches.common.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/com.macuguita.branches.branches.common.test.iml" filepath="$PROJECT_DIR$/.idea/modules/common/com.macuguita.branches.branches.common.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/com.macuguita.branches.branches.fabric.main.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/com.macuguita.branches.branches.fabric.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/com.macuguita.branches.branches.fabric.test.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/com.macuguita.branches.branches.fabric.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/forge/com.macuguita.branches.branches.forge.test.iml" filepath="$PROJECT_DIR$/.idea/modules/forge/com.macuguita.branches.branches.forge.test.iml" />
     </modules>
   </component>
 </project>

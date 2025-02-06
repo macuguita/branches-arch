@@ -1,7 +1,6 @@
 package com.macuguita.branches.forge;
 
 import com.macuguita.branches.forge.compat.WoodGood;
-import com.macuguita.branches.forge.item.ModItemGroups;
 import dev.architectury.platform.forge.EventBuses;
 import net.mehvahdjukaar.every_compat.api.EveryCompatAPI;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -20,7 +19,6 @@ public final class BranchesForge {
 
         // Run our common setup.
         Branches.init();
-        ModItemGroups.register(modEventBus);
         if (ModList.get().isLoaded("everycomp")) {
             try {
                 EveryCompatAPI.registerModule(new WoodGood(Branches.MOD_ID, "br"));

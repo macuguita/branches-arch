@@ -23,16 +23,16 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator generator) {
-        generateBranchModel(generator, ModBlocks.ACACIA_BRANCH, Blocks.ACACIA_LOG);
-        generateBranchModel(generator, ModBlocks.BIRCH_BRANCH, Blocks.BIRCH_LOG);
-        generateBranchModel(generator, ModBlocks.CHERRY_BRANCH, Blocks.CHERRY_LOG);
-        generateBranchModel(generator, ModBlocks.DARK_OAK_BRANCH, Blocks.DARK_OAK_LOG);
-        generateBranchModel(generator, ModBlocks.JUNGLE_BRANCH, Blocks.JUNGLE_LOG);
-        generateBranchModel(generator, ModBlocks.MANGROVE_BRANCH, Blocks.MANGROVE_LOG);
-        generateBranchModel(generator, ModBlocks.OAK_BRANCH, Blocks.OAK_LOG);
-        generateBranchModel(generator, ModBlocks.SPRUCE_BRANCH, Blocks.SPRUCE_LOG);
-        generateBranchModel(generator, ModBlocks.CRIMSON_STIPE, Blocks.CRIMSON_STEM);
-        generateBranchModel(generator, ModBlocks.WARPED_STIPE, Blocks.WARPED_STEM);
+        generateBranchModel(generator, ModBlocks.ACACIA_BRANCH.get(), Blocks.ACACIA_LOG);
+        generateBranchModel(generator, ModBlocks.BIRCH_BRANCH.get(), Blocks.BIRCH_LOG);
+        generateBranchModel(generator, ModBlocks.CHERRY_BRANCH.get(), Blocks.CHERRY_LOG);
+        generateBranchModel(generator, ModBlocks.DARK_OAK_BRANCH.get(), Blocks.DARK_OAK_LOG);
+        generateBranchModel(generator, ModBlocks.JUNGLE_BRANCH.get(), Blocks.JUNGLE_LOG);
+        generateBranchModel(generator, ModBlocks.MANGROVE_BRANCH.get(), Blocks.MANGROVE_LOG);
+        generateBranchModel(generator, ModBlocks.OAK_BRANCH.get(), Blocks.OAK_LOG);
+        generateBranchModel(generator, ModBlocks.SPRUCE_BRANCH.get(), Blocks.SPRUCE_LOG);
+        generateBranchModel(generator, ModBlocks.CRIMSON_STIPE.get(), Blocks.CRIMSON_STEM);
+        generateBranchModel(generator, ModBlocks.WARPED_STIPE.get(), Blocks.WARPED_STEM);
     }
 
     @Override

@@ -21,16 +21,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void generate(Consumer<RecipeJsonProvider> consumer) {
-        createBranchRecipe(ModBlocks.ACACIA_BRANCH, Blocks.ACACIA_LOG, consumer);
-        createBranchRecipe(ModBlocks.BIRCH_BRANCH, Blocks.BIRCH_LOG, consumer);
-        createBranchRecipe(ModBlocks.CHERRY_BRANCH, Blocks.CHERRY_LOG, consumer);
-        createBranchRecipe(ModBlocks.DARK_OAK_BRANCH, Blocks.DARK_OAK_LOG, consumer);
-        createBranchRecipe(ModBlocks.JUNGLE_BRANCH, Blocks.JUNGLE_LOG, consumer);
-        createBranchRecipe(ModBlocks.MANGROVE_BRANCH, Blocks.MANGROVE_LOG, consumer);
-        createBranchRecipe(ModBlocks.OAK_BRANCH, Blocks.OAK_LOG, consumer);
-        createBranchRecipe(ModBlocks.SPRUCE_BRANCH, Blocks.SPRUCE_LOG, consumer);
-        createBranchRecipe(ModBlocks.CRIMSON_STIPE, Blocks.CRIMSON_STEM, consumer);
-        createBranchRecipe(ModBlocks.WARPED_STIPE, Blocks.WARPED_STEM, consumer);
+        createBranchRecipe(ModBlocks.ACACIA_BRANCH.get(), Blocks.ACACIA_LOG, consumer);
+        createBranchRecipe(ModBlocks.BIRCH_BRANCH.get(), Blocks.BIRCH_LOG, consumer);
+        createBranchRecipe(ModBlocks.CHERRY_BRANCH.get(), Blocks.CHERRY_LOG, consumer);
+        createBranchRecipe(ModBlocks.DARK_OAK_BRANCH.get(), Blocks.DARK_OAK_LOG, consumer);
+        createBranchRecipe(ModBlocks.JUNGLE_BRANCH.get(), Blocks.JUNGLE_LOG, consumer);
+        createBranchRecipe(ModBlocks.MANGROVE_BRANCH.get(), Blocks.MANGROVE_LOG, consumer);
+        createBranchRecipe(ModBlocks.OAK_BRANCH.get(), Blocks.OAK_LOG, consumer);
+        createBranchRecipe(ModBlocks.SPRUCE_BRANCH.get(), Blocks.SPRUCE_LOG, consumer);
+        createBranchRecipe(ModBlocks.CRIMSON_STIPE.get(), Blocks.CRIMSON_STEM, consumer);
+        createBranchRecipe(ModBlocks.WARPED_STIPE.get(), Blocks.WARPED_STEM, consumer);
     }
 
     private void createBranchRecipe(Block branch, Block log, Consumer<RecipeJsonProvider> consumer) {
