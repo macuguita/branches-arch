@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "branches:crimson_stipe",
+    "branches:stripped_crimson_stipe",
+    "branches:warped_stipe",
+    "branches:stripped_warped_stipe"
+  ]
+}

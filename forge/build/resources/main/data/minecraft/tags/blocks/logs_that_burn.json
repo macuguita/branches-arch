@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "branches:acacia_branch",
+    "branches:stripped_acacia_branch",
+    "branches:birch_branch",
+    "branches:stripped_birch_branch",
+    "branches:cherry_branch",
+    "branches:stripped_cherry_branch",
+    "branches:dark_oak_branch",
+    "branches:stripped_dark_oak_branch",
+    "branches:jungle_branch",
+    "branches:stripped_jungle_branch",
+    "branches:mangrove_branch",
+    "branches:stripped_mangrove_branch",
+    "branches:oak_branch",
+    "branches:stripped_oak_branch",
+    "branches:spruce_branch",
+    "branches:stripped_spruce_branch"
+  ]
+}

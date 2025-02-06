@@ -1,0 +1,7 @@
+{
+  "parent": "branches:block/template_branch_back",
+  "textures": {
+    "side": "minecraft:block/warped_stem",
+    "top": "branches:block/warped_stipe_top"
+  }
+}
