@@ -21,16 +21,7 @@ public final class BranchesForge {
 
         // Run our common setup.
         Branches.init();
-        if (ModList.get().isLoaded("everycomp")) {
-            try {
-                EveryCompatAPI.registerModule(new WoodGood(Branches.MOD_ID, "br"));
-                Branches.LOGGER.info("Registered WoodGood module with Every Compat");
-            } catch (Exception e) {
-                Branches.LOGGER.error("Failed to register WoodGood module with Every Compat", e);
-            }
-        } else {
-            Branches.LOGGER.warn("Every Compat is not loaded. Skipping compatibility module.");
-        }
+
         modEventBus.addListener(this::commonSetup);
     }
     private void commonSetup(final FMLCommonSetupEvent event) {

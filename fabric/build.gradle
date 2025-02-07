@@ -40,8 +40,8 @@ dependencies {
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionFabric')
 
-    modImplementation "maven.modrinth:moonlight:${project.moonlight_version_fabric}"
-    modImplementation "maven.modrinth:every-compat:${project.wood_good_version_fabric}"
+    modCompileOnly "maven.modrinth:moonlight:${project.moonlight_version_fabric}"
+    modCompileOnly "maven.modrinth:every-compat:${project.wood_good_version_fabric}"
 
 }
 

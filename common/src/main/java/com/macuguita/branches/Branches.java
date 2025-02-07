@@ -2,7 +2,9 @@ package com.macuguita.branches;
 
 import com.macuguita.branches.block.ModBlocks;
 import com.macuguita.branches.block.custom.BranchBlock;
+import com.macuguita.branches.compat.ModCompat;
 import com.macuguita.branches.item.ModItemGroups;
+import dev.architectury.platform.Platform;
 import dev.architectury.registry.fuel.FuelRegistry;
 import net.minecraft.block.Block;
 import org.slf4j.Logger;
@@ -15,6 +17,16 @@ public final class Branches {
     public static void init() {
         ModBlocks.registerModBlocks();
         ModItemGroups.registerModItemGroups();
+
+        try {
+            if (Platform.isModLoaded("everycomp")) {
+                ModCompat.init();
+            } else {
+                Branches.LOGGER.info("EveryCompat module is not loaded");
+            }
+        } catch (Exception e) {
+            Branches.LOGGER.error("Failed to start EveryComp module", e);
+        }
     }
 
     public static void commonSetup() {

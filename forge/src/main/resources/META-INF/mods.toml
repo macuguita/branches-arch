@@ -1,17 +1,17 @@
 modLoader = "javafml"
 loaderVersion = "[47,)"
-#issueTrackerURL = ""
-license = "Insert License Here"
+issueTrackerURL = "https://github.com/macuguita/branches-arch/issues"
+license = "All-Rights-Reserved"
 
 [[mods]]
 modId = "branches"
 version = "${version}"
-displayName = "branches"
-authors = "Me!"
+displayName = "guita's Branches"
+authors = "macuguita"
 description = '''
-This is an example description! Tell everyone what your mod is about!
+This mod adds branches for better vegetation decoration!
 '''
-#logoFile = ""
+logoFile = "assets/branches/icon.png"
 
 [[dependencies.branches]]
 modId = "forge"

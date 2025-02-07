@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "id": "branches",
-  "version": "1.0.0-fabric",
+  "version": "${version}",
   "name": "guita's Branches",
-  "description": "This mod adds very needed branches to the game!",
+  "description": "This mod adds branches for better vegetation decoration!",
   "authors": [],
   "contact": {},
   "license": "All-Rights-Reserved",
@@ -25,7 +25,12 @@
   ],
   "depends": {
     "fabricloader": ">=0.16.10",
-    "fabric": "*",
-    "minecraft": "1.20.1"
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "architectury": ">=9.2.14",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "everycomp": "*"
   }
 }
