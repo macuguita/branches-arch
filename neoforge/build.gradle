@@ -41,7 +41,7 @@ dependencies {
     shadowBundle project(path: ':common', configuration: 'transformProductionNeoForge')
 
     modImplementation "maven.modrinth:moonlight:${project.moonlight_version_neoforge}"
-    modCompileOnly "curse.maven:every-compat-628539:6133323"
+    modImplementation "net.mehvahdjukaar:everycomp"
 }
 
 processResources {
