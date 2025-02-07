@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "branches",
-  "version": "${version}",
+  "version": "${version}-fabric",
   "name": "guita's Branches",
   "description": "This mod adds branches for better vegetation decoration!",
   "authors": [
