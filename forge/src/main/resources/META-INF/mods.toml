@@ -5,7 +5,7 @@ license = "All-Rights-Reserved"
 
 [[mods]]
 modId = "branches"
-version = "${version}"
+version = "${version}-forge"
 displayName = "guita's Branches"
 authors = "macuguita"
 description = '''
