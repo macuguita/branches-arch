@@ -2,11 +2,10 @@ package com.macuguita.branches;
 
 import com.macuguita.branches.block.ModBlocks;
 import com.macuguita.branches.block.custom.BranchBlock;
-import com.macuguita.branches.compat.WoodGood;
+import com.macuguita.branches.compat.ModCompat;
 import com.macuguita.branches.item.ModItemGroups;
 import dev.architectury.platform.Platform;
 import dev.architectury.registry.fuel.FuelRegistry;
-import net.mehvahdjukaar.every_compat.api.EveryCompatAPI;
 import net.minecraft.block.Block;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,15 +17,15 @@ public final class Branches {
     public static void init() {
         ModBlocks.registerModBlocks();
         ModItemGroups.registerModItemGroups();
-        if (Platform.isModLoaded("everycomp")) {
-            try {
-                EveryCompatAPI.registerModule(new WoodGood(Branches.MOD_ID, "br"));
-                Branches.LOGGER.info("Registered WoodGood module with Every Compat");
-            } catch (Exception e) {
-                Branches.LOGGER.error("Failed to register WoodGood module with Every Compat", e);
+
+        try {
+            if (Platform.isModLoaded("everycomp")) {
+                ModCompat.init();
+            } else {
+                Branches.LOGGER.info("EveryCompat module is not loaded");
             }
-        } else {
-            Branches.LOGGER.warn("Every Compat is not loaded. Skipping compatibility module.");
+        } catch (Exception e) {
+            Branches.LOGGER.error("Failed to start EveryComp module", e);
         }
     }
 
