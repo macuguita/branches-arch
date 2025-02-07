@@ -33,3 +33,10 @@ mandatory = true
 versionRange = "[9.2.14,)"
 ordering = "AFTER"
 side = "BOTH"
+
+[[dependencies.branches]]
+modId = "everycomp"
+mandatory = false
+versionRange = "*"
+ordering = "BEFORE"
+side = "BOTH"
