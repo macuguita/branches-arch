@@ -1,0 +1,7 @@
+{
+  "parent": "branches:block/template_branch_front",
+  "textures": {
+    "side": "minecraft:block/birch_log",
+    "top": "branches:block/birch_branch_top"
+  }
+}
