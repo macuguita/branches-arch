@@ -1,4 +1,5 @@
 package com.macuguita.branches.compat;
+
 import com.macuguita.branches.Branches;
 import net.mehvahdjukaar.every_compat.api.EveryCompatAPI;
 
