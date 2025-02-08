@@ -7,6 +7,12 @@ import com.macuguita.branches.utils.ModTags;
 import dev.architectury.registry.fuel.FuelRegistry;
 import net.mehvahdjukaar.every_compat.api.SimpleEntrySet;
 import net.mehvahdjukaar.every_compat.api.SimpleModule;
+import net.mehvahdjukaar.every_compat.dynamicpack.ClientDynamicResourcesHandler;
+import net.mehvahdjukaar.every_compat.misc.SpriteHelper;
+import net.mehvahdjukaar.moonlight.api.resources.BlockTypeResTransformer;
+import net.mehvahdjukaar.moonlight.api.resources.RPUtils;
+import net.mehvahdjukaar.moonlight.api.resources.textures.ImageTransformer;
+import net.mehvahdjukaar.moonlight.api.resources.textures.TextureImage;
 import net.mehvahdjukaar.moonlight.api.set.wood.WoodType;
 import net.mehvahdjukaar.moonlight.api.set.wood.WoodTypeRegistry;
 import net.mehvahdjukaar.moonlight.api.util.Utils;
@@ -14,6 +20,7 @@ import net.minecraft.block.Block;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.resource.ResourceManager;
 import net.minecraft.util.Identifier;
 
 public class WoodGood extends SimpleModule {
@@ -57,6 +64,7 @@ public class WoodGood extends SimpleModule {
                 .build();
         this.addEntry(strippedBranchBlock);
     }
+
     @Override
     public void onModSetup() {
         branchBlock.blocks.forEach((w, block) -> {
@@ -68,6 +76,49 @@ public class WoodGood extends SimpleModule {
                 FuelRegistry.register(37, stripped);
             }
         });
+    }
+
+    @Override
+    public void addDynamicClientResources(ClientDynamicResourcesHandler handler, ResourceManager manager) {
+        super.addDynamicClientResources(handler, manager);
+        try {
+            branchBlock.blocks.forEach((w, block) -> {
+                Identifier id = Utils.getID(block);
+
+                try (TextureImage branchTopTexture = TextureImage.open(manager,
+                        RPUtils.findFirstBlockTextureLocation(manager, block, SpriteHelper.LOOKS_LIKE_TOP_LOG_TEXTURE));
+                     TextureImage topTexture = TextureImage.open(manager,
+                             RPUtils.findFirstBlockTextureLocation(manager, w.log, SpriteHelper.LOOKS_LIKE_TOP_LOG_TEXTURE))) {
+
+                    String newId = BlockTypeResTransformer.replaceTypeNoNamespace("block/oak_branch_top", w, id, "oak");
+                    var newTexture = branchTopTexture.makeCopy();
+
+                    handler.addTextureIfNotPresent(manager, newId, () -> newTexture);
+
+                    var newTop = branchTopTexture.makeCopy();
+                    generateBranchTexture(topTexture, newTop);
+
+                    handler.addTextureIfNotPresent(manager, newId, () -> newTop);
+
+                } catch (Exception e) {
+                    handler.getLogger().error("Failed to generate Branch block texture for for {} : {}", block, e);
+                }
+            });
+        } catch (Exception e) {
+            Branches.LOGGER.error("Failed to open branch_top texture: ", e);
+        }
+    }
+
+    private void generateBranchTexture(TextureImage original, TextureImage target) {
+        ImageTransformer transformer = ImageTransformer.builder(16, 16, 16, 16)
+                // Apply the bark borders
+                .copyRect(0, 0, 16, 1, 0, 4, 8, 1) // Top border
+                .copyRect(0, 15, 16, 1, 0, 11, 8, 1) // Bottom border
+                .copyRect(0, 0, 1, 16, 4, 0, 1, 8) // Left border
+                .copyRect(15, 0, 1, 16, 11, 0, 1, 8) // Right border
+                .build();
+
+        transformer.apply(original, target);
     }
 
     public void strippedMapper(Block branch, Block strippedBranch) {
