@@ -64,12 +64,13 @@ public class WoodGood extends SimpleModule {
                 .build();
         this.addEntry(strippedBranchBlock);
     }
+
     @Override
     public void onModSetup() {
         branchBlock.blocks.forEach((w, block) -> {
 
             Block stripped = strippedBranchBlock.blocks.get(w);
-            dev.architectury.registry.fuel.FuelRegistry.register(37, block);
+            FuelRegistry.register(37, block);
             if (stripped != null) {
                 strippedMapper(block, stripped);
                 FuelRegistry.register(37, stripped);
@@ -96,6 +97,7 @@ public class WoodGood extends SimpleModule {
 
                     var newTop = branchTopTexture.makeCopy();
                     generateBranchTexture(topTexture, newTop);
+                    cleanUpTopTexture(newTop);
 
                     handler.addTextureIfNotPresent(manager, newId, () -> newTop);
 
@@ -105,6 +107,33 @@ public class WoodGood extends SimpleModule {
             });
         } catch (Exception e) {
             Branches.LOGGER.error("Failed to open branch_top texture: ", e);
+        }
+        try {
+            strippedBranchBlock.blocks.forEach((w, block) -> {
+                Identifier id = Utils.getID(block);
+
+                try (TextureImage branchTopTexture = TextureImage.open(manager,
+                        RPUtils.findFirstBlockTextureLocation(manager, block, SpriteHelper.LOOKS_LIKE_TOP_LOG_TEXTURE));
+                     TextureImage topTexture = TextureImage.open(manager,
+                             RPUtils.findFirstBlockTextureLocation(manager, w.getBlockOfThis("stripped_log"), SpriteHelper.LOOKS_LIKE_TOP_LOG_TEXTURE))) {
+
+                    String newId = BlockTypeResTransformer.replaceTypeNoNamespace("block/stripped_oak_branch_top", w, id, "oak");
+                    var newTexture = branchTopTexture.makeCopy();
+
+                    handler.addTextureIfNotPresent(manager, newId, () -> newTexture);
+
+                    var newTop = branchTopTexture.makeCopy();
+                    generateBranchTexture(topTexture, newTop);
+                    cleanUpTopTexture(newTop);
+
+                    handler.addTextureIfNotPresent(manager, newId, () -> newTop);
+
+                } catch (Exception e) {
+                    handler.getLogger().error("Failed to generate Stripped Branch block texture for for {} : {}", block, e);
+                }
+            });
+        } catch (Exception e) {
+            Branches.LOGGER.error("Failed to open stripped_branch_top texture: ", e);
         }
     }
 
@@ -118,6 +147,21 @@ public class WoodGood extends SimpleModule {
                 .build();
 
         transformer.apply(original, target);
+    }
+
+    private void cleanUpTopTexture(TextureImage image) {
+        image.forEachFramePixel((i, x, y) -> {
+            int localX = x - image.getFrameStartX(i);
+            int localY = y - image.getFrameStartY(i);
+
+            // Keep pixels within (4,4) to (11,11) opaque, make others transparent
+            boolean insideOpaqueRegion = (localX >= 4 && localX <= 11) && (localY >= 4 && localY <= 11);
+
+            if (!insideOpaqueRegion) {
+                // Set pixel to transparent
+                image.getImage().setColor(x, y, 0);
+            }
+        });
     }
 
     public void strippedMapper(Block branch, Block strippedBranch) {
