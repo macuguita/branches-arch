@@ -30,16 +30,7 @@ subprojects {
         flatDir {
             dirs 'mods'
         }
-        exclusiveContent {
-            forRepository {
-                maven {
-                    url "https://cursemaven.com"
-                }
-            }
-            filter {
-                includeGroup "curse.maven"
-            }
-        }
+        maven { url "https://maven.terraformersmc.com/releases/" }
     }
 
     dependencies {

@@ -37,6 +37,8 @@ public class ModLangProvider extends FabricLanguageProvider {
         translationBuilder.add("block_type.branches.stripped_branch", "Stripped %s Branch");
         translationBuilder.add("item_group.branches", "Branches");
         translationBuilder.add("tag.item.branches.branches", "Branches");
+        translationBuilder.add("branches.midnightconfig.title", "guita's Branches");
+        translationBuilder.add("branches.midnightconfig.showInVanillaItemGroups", "Show in vanilla Creative Tabs");
     }
 
     private String capitalizeString(String string) {

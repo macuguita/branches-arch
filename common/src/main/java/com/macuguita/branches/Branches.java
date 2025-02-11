@@ -6,6 +6,7 @@ import com.macuguita.branches.compat.ModCompat;
 import com.macuguita.branches.item.ModItemGroups;
 import dev.architectury.platform.Platform;
 import dev.architectury.registry.fuel.FuelRegistry;
+import eu.midnightdust.lib.config.MidnightConfig;
 import net.minecraft.block.Block;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,6 +16,7 @@ public final class Branches {
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
     public static void init() {
+        MidnightConfig.init(MOD_ID, ModConfig.class);
         ModBlocks.registerModBlocks();
         ModItemGroups.registerModItemGroups();
 

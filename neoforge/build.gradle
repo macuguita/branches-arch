@@ -42,6 +42,7 @@ dependencies {
 
     modImplementation "maven.modrinth:moonlight:${project.moonlight_version_neoforge}"
     modImplementation "net.mehvahdjukaar:everycomp"
+    modImplementation include ("maven.modrinth:midnightlib:${project.midnightlib_version_neoforge}")
 }
 
 processResources {
