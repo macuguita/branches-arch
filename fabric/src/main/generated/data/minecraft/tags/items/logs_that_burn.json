@@ -16,6 +16,10 @@
     "branches:oak_branch",
     "branches:stripped_oak_branch",
     "branches:spruce_branch",
-    "branches:stripped_spruce_branch"
+    "branches:stripped_spruce_branch",
+    "branches:crimson_stipe",
+    "branches:stripped_crimson_stipe",
+    "branches:warped_stipe",
+    "branches:stripped_warped_stipe"
   ]
 }

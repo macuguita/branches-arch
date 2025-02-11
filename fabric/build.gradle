@@ -42,7 +42,8 @@ dependencies {
 
     modCompileOnly "maven.modrinth:moonlight:${project.moonlight_version_fabric}"
     modCompileOnly "maven.modrinth:every-compat:${project.wood_good_version_fabric}"
-
+    modImplementation include ("maven.modrinth:midnightlib:${project.midnightlib_version_fabric}")
+    modApi "com.terraformersmc:modmenu:7.2.2"
 }
 
 processResources {

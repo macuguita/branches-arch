@@ -21,6 +21,8 @@
   "block.branches.warped_stipe": "Warped Stipe",
   "block_type.branches.branch": "%s Branch",
   "block_type.branches.stripped_branch": "Stripped %s Branch",
+  "branches.midnightconfig.showInVanillaItemGroups": "Branches",
+  "branches.midnightconfig.title": "guita's Branches",
   "item_group.branches": "Branches",
   "tag.item.branches.branches": "Branches"
 }
