@@ -1,11 +1,7 @@
 package com.macuguita.branches.forge;
 
-import com.macuguita.branches.block.ModBlocks;
-import com.macuguita.branches.forge.compat.WoodGood;
 import dev.architectury.platform.forge.EventBuses;
-import net.mehvahdjukaar.every_compat.api.EveryCompatAPI;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
