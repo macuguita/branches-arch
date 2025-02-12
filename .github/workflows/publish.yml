@@ -137,8 +137,15 @@ jobs:
           name: "guita's Branches ${{ env.mod_version }}-fabric"
           version: "${{ env.mod_version }}-fabric"
           version-type: ${{ inputs.release_as_beta && 'beta' || 'release' }}
-          loaders: fabric
+          loaders: |
+            fabric
+            quilt
           game-versions: ${{ env.mc_version }}
+          dependencies: |
+            fabric-api@{modrinth:P7dR8mSH}(required)
+            architectury-api@{modrinth:lhGA9TYQ}(required)
+            every-compat@{modrinth:eiktJyw1}(recommended)
+            midnightlib@{modrinth:codAaoxh}(embedded)
         env:
           mod_name: ${{ steps.read_properties.outputs.archives_name }}
           mc_version: ${{ steps.read_properties.outputs.minecraft_version }}
@@ -155,6 +162,10 @@ jobs:
           version-type: ${{ inputs.release_as_beta && 'beta' || 'release' }}
           loaders: neoforge
           game-versions: ${{ env.mc_version }}
+          dependencies: |
+            architectury-api@{modrinth:lhGA9TYQ}(required)
+            every-compat@{modrinth:eiktJyw1}(recommended)
+            midnightlib@{modrinth:codAaoxh}(embedded)
         env:
           mod_name: ${{ steps.read_properties.outputs.archives_name }}
           mc_version: ${{ steps.read_properties.outputs.minecraft_version }}
@@ -198,6 +209,13 @@ jobs:
           version-type: ${{ inputs.release_as_beta && 'beta' || 'release' }}
           loaders: fabric
           game-versions: ${{ env.mc_version }}
+          dependencies: |
+            fabric-api@{curseforge:306612}(required)
+            architectury-api@{curseforge:419699}(required)
+            every-compat@{curseforge:628539}(recommended)
+            midnightlib@{curseforge:488090}(embedded)
+          java: |
+            17
         env:
           mod_name: ${{ steps.read_properties.outputs.archives_name }}
           mc_version: ${{ steps.read_properties.outputs.minecraft_version }}
@@ -214,6 +232,12 @@ jobs:
           version-type: ${{ inputs.release_as_beta && 'beta' || 'release' }}
           loaders: neoforge
           game-versions: ${{ env.mc_version }}
+          dependencies: |
+            architectury-api@{curseforge:419699}(required)
+            every-compat@{curseforge:628539}(recommended)
+            midnightlib@{curseforge:488090}(embedded)
+          java: |
+            17
         env:
           mod_name: ${{ steps.read_properties.outputs.archives_name }}
           mc_version: ${{ steps.read_properties.outputs.minecraft_version }}
