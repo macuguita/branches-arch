@@ -215,7 +215,7 @@ jobs:
             every-compat@{curseforge:628539}(recommended)
             midnightlib@{curseforge:488090}(embedded)
           java: |
-            17
+            21
         env:
           mod_name: ${{ steps.read_properties.outputs.archives_name }}
           mc_version: ${{ steps.read_properties.outputs.minecraft_version }}
@@ -237,7 +237,7 @@ jobs:
             every-compat@{curseforge:628539}(recommended)
             midnightlib@{curseforge:488090}(embedded)
           java: |
-            17
+            21
         env:
           mod_name: ${{ steps.read_properties.outputs.archives_name }}
           mc_version: ${{ steps.read_properties.outputs.minecraft_version }}
