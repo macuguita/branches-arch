@@ -55,8 +55,8 @@ jobs:
           path: fabric/build/libs/
       - uses: actions/upload-artifact@v4.3.0
         with:
-          name: build-forge
-          path: forge/build/libs/
+          name: build-neoforge
+          path: neoforge/build/libs/
 
   publish-github:
     name: 🐙 Publish to GitHub
@@ -80,7 +80,7 @@ jobs:
           ls -a -r
           mv ./build-common/${{ env.mod_name }}-common-${{ env.mod_version }}.jar ${{ env.mod_name }}-common-${{ env.mod_version }}.jar
           mv ./build-fabric/${{ env.mod_name }}-fabric-${{ env.mod_version }}.jar ./${{ env.mod_name }}-fabric-${{ env.mod_version }}.jar
-          mv ./build-forge/${{ env.mod_name }}-forge-${{ env.mod_version }}.jar ./${{ env.mod_name }}-forge-${{ env.mod_version }}.jar
+          mv ./build-neoforge/${{ env.mod_name }}-neoforge-${{ env.mod_version }}.jar ./${{ env.mod_name }}-neoforge-${{ env.mod_version }}.jar
         env:
           mod_name: ${{ steps.read_properties.outputs.archives_name }}
           mod_version: ${{ steps.read_properties.outputs.mod_version }}
@@ -91,7 +91,7 @@ jobs:
           files: |
             compiledmods/${{ env.mod_name }}-common-${{ env.mod_version }}.jar
             compiledmods/${{ env.mod_name }}-fabric-${{ env.mod_version }}.jar
-            compiledmods/${{ env.mod_name }}-forge-${{ env.mod_version }}.jar
+            compiledmods/${{ env.mod_name }}-neoforge-${{ env.mod_version }}.jar
           github-tag: "v${{ env.mod_version }}"
           name: "v${{ env.mod_version }}"
           version: "v${{ env.mod_version }}"
@@ -123,7 +123,7 @@ jobs:
           ls -a -r
           mv ./build-common/${{ env.mod_name }}-common-${{ env.mod_version }}.jar ${{ env.mod_name }}-common-${{ env.mod_version }}.jar
           mv ./build-fabric/${{ env.mod_name }}-fabric-${{ env.mod_version }}.jar ./${{ env.mod_name }}-fabric-${{ env.mod_version }}.jar
-          mv ./build-forge/${{ env.mod_name }}-forge-${{ env.mod_version }}.jar ./${{ env.mod_name }}-forge-${{ env.mod_version }}.jar
+          mv ./build-neoforge/${{ env.mod_name }}-neoforge-${{ env.mod_version }}.jar ./${{ env.mod_name }}-neoforge-${{ env.mod_version }}.jar
         env:
           mod_name: ${{ steps.read_properties.outputs.archives_name }}
           mod_version: ${{ steps.read_properties.outputs.mod_version }}
@@ -137,24 +137,35 @@ jobs:
           name: "guita's Branches ${{ env.mod_version }}-fabric"
           version: "${{ env.mod_version }}-fabric"
           version-type: ${{ inputs.release_as_beta && 'beta' || 'release' }}
-          loaders: fabric
+          loaders: |
+            fabric
+            quilt
           game-versions: ${{ env.mc_version }}
+          dependencies: |
+            fabric-api@{modrinth:P7dR8mSH}(required)
+            architectury-api@{modrinth:lhGA9TYQ}(required)
+            every-compat@{modrinth:eiktJyw1}(recommended)
+            midnightlib@{modrinth:codAaoxh}(embedded)
         env:
           mod_name: ${{ steps.read_properties.outputs.archives_name }}
           mc_version: ${{ steps.read_properties.outputs.minecraft_version }}
           mod_version: ${{ steps.read_properties.outputs.mod_version }}
-      - name: Publish for forge
+      - name: Publish for NeoForge
         uses: Kir-Antipov/mc-publish@v3.3
         with:
           modrinth-id: 3Rn43X40
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
           files: |
-            compiledmods/${{ env.mod_name }}-forge-${{ env.mod_version }}.jar
-          name: "guita's Branches ${{ env.mod_version }}-forge"
-          version: "${{ env.mod_version }}-forge"
+            compiledmods/${{ env.mod_name }}-neoforge-${{ env.mod_version }}.jar
+          name: "guita's Branches ${{ env.mod_version }}-neoforge"
+          version: "${{ env.mod_version }}-neoforge"
           version-type: ${{ inputs.release_as_beta && 'beta' || 'release' }}
-          loaders: forge
+          loaders: neoforge
           game-versions: ${{ env.mc_version }}
+          dependencies: |
+            architectury-api@{modrinth:lhGA9TYQ}(required)
+            every-compat@{modrinth:eiktJyw1}(recommended)
+            midnightlib@{modrinth:codAaoxh}(embedded)
         env:
           mod_name: ${{ steps.read_properties.outputs.archives_name }}
           mc_version: ${{ steps.read_properties.outputs.minecraft_version }}
@@ -182,7 +193,7 @@ jobs:
           ls -a -r
           mv ./build-common/${{ env.mod_name }}-common-${{ env.mod_version }}.jar ${{ env.mod_name }}-common-${{ env.mod_version }}.jar
           mv ./build-fabric/${{ env.mod_name }}-fabric-${{ env.mod_version }}.jar ./${{ env.mod_name }}-fabric-${{ env.mod_version }}.jar
-          mv ./build-forge/${{ env.mod_name }}-forge-${{ env.mod_version }}.jar ./${{ env.mod_name }}-forge-${{ env.mod_version }}.jar
+          mv ./build-neoforge/${{ env.mod_name }}-neoforge-${{ env.mod_version }}.jar ./${{ env.mod_name }}-neoforge-${{ env.mod_version }}.jar
         env:
           mod_name: ${{ steps.read_properties.outputs.archives_name }}
           mod_version: ${{ steps.read_properties.outputs.mod_version }}
@@ -198,22 +209,35 @@ jobs:
           version-type: ${{ inputs.release_as_beta && 'beta' || 'release' }}
           loaders: fabric
           game-versions: ${{ env.mc_version }}
+          dependencies: |
+            fabric-api@{curseforge:306612}(required)
+            architectury-api@{curseforge:419699}(required)
+            every-compat@{curseforge:628539}(recommended)
+            midnightlib@{curseforge:488090}(embedded)
+          java: |
+            17
         env:
           mod_name: ${{ steps.read_properties.outputs.archives_name }}
           mc_version: ${{ steps.read_properties.outputs.minecraft_version }}
           mod_version: ${{ steps.read_properties.outputs.mod_version }}
-      - name: Publish for forge
+      - name: Publish for NeoForge
         uses: Kir-Antipov/mc-publish@v3.3
         with:
           curseforge-id: 1195790
           curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
           files: |
-            compiledmods/${{ env.mod_name }}-forge-${{ env.mod_version }}.jar
-          name: "guita's Branches ${{ env.mod_version }}-forge"
-          version: "${{ env.mod_version }}-forge"
+            compiledmods/${{ env.mod_name }}-neoforge-${{ env.mod_version }}.jar
+          name: "guita's Branches ${{ env.mod_version }}-neoforge"
+          version: "${{ env.mod_version }}-neoforge"
           version-type: ${{ inputs.release_as_beta && 'beta' || 'release' }}
-          loaders: forge
+          loaders: neoforge
           game-versions: ${{ env.mc_version }}
+          dependencies: |
+            architectury-api@{curseforge:419699}(required)
+            every-compat@{curseforge:628539}(recommended)
+            midnightlib@{curseforge:488090}(embedded)
+          java: |
+            17
         env:
           mod_name: ${{ steps.read_properties.outputs.archives_name }}
           mc_version: ${{ steps.read_properties.outputs.minecraft_version }}
