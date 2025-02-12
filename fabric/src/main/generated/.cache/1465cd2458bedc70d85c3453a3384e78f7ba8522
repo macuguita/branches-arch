@@ -1,4 +1,4 @@
-// 1.20.1	2025-02-11T09:32:30.951504	guita's Branches/Model Definitions
+// 1.20.1	2025-02-12T10:40:07.490578	guita's Branches/Model Definitions
 c919b58114353678616cbd0dc77a2f76eaee9541 assets/branches/models/block/stripped_crimson_stipe_back.json
 509923039c58e00d8f3449f528e8ef3668767a90 assets/branches/models/block/acacia_branch_inventory.json
 779ad664ac5c6c01c874fc189972d6ff21c27dd7 assets/branches/models/block/spruce_branch_inventory.json
@@ -15,8 +15,8 @@ da3038bb5d9bf742087c9bc0e7fed5247f51f6d7 assets/branches/models/block/birch_bran
 db1bc0516bea232d03ade7120eb27be3209cbc65 assets/branches/models/item/stripped_warped_stipe.json
 7b67c7d7be42bd995f78b11b21c706c2481bd9d4 assets/branches/models/block/dark_oak_branch_face.json
 5e94a4f28a5ba08f4d854aa9d642cdea15a28c67 assets/branches/models/block/stripped_oak_branch_back.json
-4a43812f09c9101ac1402c404718418ef02eaf81 assets/branches/models/item/stripped_birch_branch.json
 2c3bf9b3e7dfc5aaf6bd2c1fa8119e754ad26806 assets/branches/blockstates/stripped_mangrove_branch.json
+4a43812f09c9101ac1402c404718418ef02eaf81 assets/branches/models/item/stripped_birch_branch.json
 6855a57df4d01395de6ea2d877c0eaa94a9b3a75 assets/branches/models/block/stripped_warped_stipe_face.json
 dd28bff0d4aaa45ed50c54f931e0076598b0a4a5 assets/branches/models/block/stripped_spruce_branch_face_horizontal.json
 993a9bc7b5722502a30909c07bd90a1a8e172220 assets/branches/models/item/crimson_stipe.json
@@ -49,8 +49,8 @@ da085cbe5109ac00a9ca2cdfdc31e2a68ebfd221 assets/branches/models/block/stripped_s
 6ca55983256c14eacb6778c0a867a1071abe68cb assets/branches/blockstates/cherry_branch.json
 9714c6a75401d2d0d863697a5a36b1d440194d64 assets/branches/models/block/stripped_crimson_stipe_front.json
 065d7bee96e18835fe3f61e319f1ebdfc3f23249 assets/branches/models/item/stripped_spruce_branch.json
-32d2533911dc36d763ac13d04674f465121e0262 assets/branches/models/block/stripped_warped_stipe_face_horizontal.json
 cafb2a4e27284c33e40e14312a0f5c8711622cb3 assets/branches/blockstates/stripped_cherry_branch.json
+32d2533911dc36d763ac13d04674f465121e0262 assets/branches/models/block/stripped_warped_stipe_face_horizontal.json
 f2d33d7435f5e60bd5a2cb9467400d515fcc8652 assets/branches/models/block/stripped_crimson_stipe_inventory.json
 7d9da3f54e7c4028d4a640657fba2bd2426d1b14 assets/branches/models/block/cherry_branch_back.json
 90b880fac0bc6cc263cab83de9fee2c35d25e09d assets/branches/models/item/stripped_acacia_branch.json
